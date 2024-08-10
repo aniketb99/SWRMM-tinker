@@ -1,0 +1,28 @@
++--------------------------+-------------------+-----------------------------------------------------------+
+| Input Parameter          | Section           | Effect on Runoff                                           |
++--------------------------+-------------------+-----------------------------------------------------------+
+| Rainfall Intensity       | [RAINGAGES]       | Higher intensity increases runoff volume.                  |
+| Subcatchment Area        | [SUBCATCHMENTS]   | Larger area generates more runoff.                         |
+| % Impervious             | [SUBCATCHMENTS]   | Higher imperviousness reduces infiltration, increasing runoff. |
+| Slope (% Slope)          | [SUBCATCHMENTS]   | Steeper slopes lead to faster and potentially greater runoff. |
+| Infiltration Rates       | [INFILTRATION]    | Lower infiltration rates increase runoff.                  |
+| Surface Roughness        | [SUBAREAS]        | Lower roughness (Manning’s n) increases runoff speed and volume. |
+| Depressional Storage     | [SUBAREAS]        | More storage reduces initial runoff volume.                |
+| Evaporation              | [EVAPORATION]     | Higher evaporation reduces runoff volume (less significant in short events). |
+| Land Use                 | [LANDUSES] &      | Different land uses impact runoff based on imperviousness and surface cover. |
+|                          | [COVERAGES]       |                                                           |
++--------------------------+-------------------+-----------------------------------------------------------+
+
++--------------------------+-----------------+--------------------+
+| Input Parameter          | Typical Range   | Example Value      |
++--------------------------+-----------------+--------------------+
+| Rainfall Intensity       | 0.1 - 2 in/hr   | 0.25 - 0.8 in/hr   |
+| Subcatchment Area        | 1 - 50 acres    | 5 - 20 acres       |
+| % Impervious             | 20% - 100%      | 30% - 70%          |
+| Slope (% Slope)          | 0.5% - 10%      | 1% - 5%            |
+| Infiltration Rates       | 0.1 - 1.0 in/hr | 0.25 - 0.7 in/hr   |
+| Surface Roughness (n)    | 0.01 - 0.05     | 0.013 (impervious), 0.1 (pervious) |
+| Depressional Storage     | 0.05 - 0.5 in   | 0.05 - 0.2 in      |
+| Evaporation Rate         | 0.0 - 0.3 in/day| 0.0 in/day (constant, dry only) |
+| Land Use                 | Varies          | Residential, Undeveloped |
++--------------------------+-----------------+--------------------+
